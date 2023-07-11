@@ -213,7 +213,7 @@ function App() {
               operation={handleNumberClicked}
             />
           </div>
-          <div className="lastRow">
+          <div className="d-flex">
             <Key
               text={`RESET`}
               className={`resetBtn half ${
