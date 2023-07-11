@@ -1,6 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap");
 
 :root {
+  /* ---------------------------- */
+  /* Theme-1 */
   --appBlueBackground: hsl(222, 26%, 31%);
   --calcBackgroundBlue: hsl(223, 31%, 20%);
   --fieldBlueBackground: hsl(224, 36%, 15%);
@@ -15,12 +17,62 @@
 
   --LightGrayishOrange: hsl(30, 25%, 89%);
   --GrayishOrange: hsl(28, 16%, 65%);
+
+  /* ---------------------------- */
+  /* Theme-2 */
+
+  /* Backgrounds */
+  --LightGray: hsl(0, 0%, 90%);
+  --GrayishRed: hsl(0, 5%, 81%);
+  --VeryLightGray: hsl(0, 0%, 93%);
+
+  /* Keys */
+  --LightBlack: rgb(14, 47, 47);
+  --DarkModerateCyan: hsl(185, 42%, 37%);
+  --VeryDarkCyan: hsl(185, 58%, 25%);
+  --Orange: hsl(25, 98%, 40%);
+  --DarkOrange: hsl(25, 99%, 27%);
+  --LightGrayishYellow: hsl(45, 7%, 89%);
+  --DarkGrayishOrange: hsl(35, 11%, 61%);
+
+  /* ---------------------------- */
+  /* Theme-3 */
+
+  /* Backgrounds */
+
+  --VeryDarkViolet-screen: hsl(268, 75%, 9%);
+  --VeryDarkViolet: hsl(268, 71%, 12%);
+
+  /* Keys */
+  --Yello: hsl(62, 74%, 57%);
+  --DarkViolet: hsl(281, 89%, 26%);
+  --VividMagenta: hsl(285, 91%, 52%);
+
+  --PureCyan: hsl(176, 100%, 44%);
+  --SoftCyan: hsl(177, 92%, 70%);
+
+  --VeryDarkViolet-keys: hsl(268, 47%, 21%);
+  --DarkMagenta: hsl(290, 70%, 36%);
 }
+
 .App {
   font-family: "League Spartan", sans-serif;
-  background-color: var(--appBlueBackground);
   height: 100vh;
 }
+
+.firstThemeApp {
+  background-color: var(--appBlueBackground);
+  color: white;
+}
+.secondThemeApp {
+  background-color: var(--LightGray);
+  color: var(--LightBlack);
+}
+.thirdThemeApp {
+  background-color: var(--VeryDarkViolet-screen);
+  color: var(--Yello);
+}
+
 .calculator {
   width: 27rem;
   display: flex;
@@ -28,32 +80,80 @@
 }
 
 .title {
-  color: white;
+  width: 100%;
+}
+.themeSection {
+  margin-bottom: 1.5rem;
+}
+.title h6 {
+  font-size: 12px;
+  margin-top: 2.2rem;
+  margin-right: 1rem;
+}
+.themeSelector {
+  width: 4rem;
+  height: 1.4rem;
+  border-radius: 13px;
+}
+.firstThemeThemeSelector {
+  background-color: var(--calcBackgroundBlue);
+}
+.secondThemeThemeSelector {
+  background-color: var(--GrayishRed);
+}
+.thirdThemeThemeSelector {
+  background-color: var(--VeryDarkViolet);
+}
+p {
+  margin: 0px;
+  padding: 0px;
+}
+.themeNumbers {
+  margin-right: 0.8rem;
+}
+
+.theme1,
+.theme2,
+.theme3 {
+  width: 0.9rem;
+  height: 0.9rem;
+  border-radius: 50%;
+  margin-left: 0.3rem;
+}
+.theme1 {
+  background-color: var(--Red);
+}
+
+.theme2 {
+  background-color: var(--Orange);
+}
+.theme3 {
+  background-color: var(--PureCyan);
 }
 
 .inputField {
+  margin-top: 1rem;
   height: 6rem;
   width: 100%;
-  background-color: var(--fieldBlueBackground);
   border: none;
   padding: 1rem;
   border-radius: 5px;
   overflow: auto;
 }
-.inputFieldAnimation {
-  animation-name: fade-in;
-  animation-duration: 0.5s;
-}
-@keyframes fade-in {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-.result {
+.firstThemeInputField {
+  background-color: var(--fieldBlueBackground);
   color: white;
+}
+.secondThemeInputField {
+  background-color: white;
+  color: var(--LightBlack);
+}
+.thirdThemeInputField {
+  background-color: var(--VeryDarkViolet);
+  color: var(--Yello);
+}
+
+.result {
   font-size: 36px;
 }
 
@@ -63,8 +163,18 @@
   text-align: center;
   margin-top: 1rem;
   padding: 0.7rem;
+}
+
+.firstThemeInputsSection {
   background-color: var(--calcBackgroundBlue);
 }
+.secondThemeInputsSection {
+  background-color: var(--GrayishRed);
+}
+.thirdThemeInputsSection {
+  background-color: var(--VeryDarkViolet);
+}
+
 .keys {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -78,67 +188,136 @@
 .key {
   font-size: 24px;
   width: 85%;
-  background-color: var(--keysWhite);
   padding: 0.5rem 1.5rem;
   margin: 0.5rem;
-  color: var(--appBlueBackground);
   border-radius: 5px;
-  box-shadow: 0px 3px 0px 0px rgba(187, 187, 187, 0.693);
   display: flex;
   justify-content: center;
   align-items: end;
 }
-.key:active {
-  background-color: white;
+
+.firstThemeKeys {
+  background-color: var(--keysWhite);
+  box-shadow: 0px 3px 0px 0px rgba(187, 187, 187, 0.693);
+  color: var(--appBlueBackground);
 }
-.key:hover {
-  cursor: pointer;
+.secondThemeKeys {
+  background-color: var(--LightGrayishYellow);
+  box-shadow: 0px 3px 0px 0px var(--DarkGrayishOrange);
+  color: var(--LightBlack);
+}
+.thirdThemeKeys {
+  background-color: var(--VeryDarkViolet-keys);
+  box-shadow: 0px 3px 0px 0px var(--DarkMagenta);
+  color: var(--Yello);
 }
 
-.deleteBtn {
-  background-color: var(--keysLightBlueBackground);
+.firstThemeKeys:active,
+.secondThemeKeys:active {
+  background-color: white;
+}
+
+.thirdThemeKeys:active {
+  background-color: var(--DarkViolet);
+}
+
+.deleteBtn,
+.resetBtn {
   color: var(--keysWhite);
+}
+.firstThemeDeleteBtn,
+.firstThemeResetBtn {
+  background-color: var(--keysLightBlueBackground);
   box-shadow: 0px 3px 0px 0px var(--blueKeyShadow);
 }
-.deleteBtn:hover {
-  cursor: pointer;
+.secondThemeDeleteBtn,
+.secondThemeResetBtn {
+  background-color: var(--DarkModerateCyan);
+  box-shadow: 0px 3px 0px 0px var(--VeryDarkCyan);
 }
-.resetBtn:hover {
-  cursor: pointer;
+.thirdThemeDeleteBtn,
+.thirdThemeResetBtn {
+  background-color: var(--DarkViolet);
+  box-shadow: 0px 3px 0px 0px var(--VividMagenta);
 }
-.deleteBtn:active {
+
+.firstThemeDeleteBtn:active,
+.firstThemeResetBtn:active {
   background-color: var(--keysLightBlueClick);
 }
-.resetBtn:active {
-  background-color: var(--keysLightBlueClick);
+.secondThemeDeleteBtn:active,
+.secondThemeResetBtn:active {
+  background-color: hsl(185, 39%, 50%);
+}
+.thirdThemeDeleteBtn:active,
+.thirdThemeResetBtn:active {
+  background-color: hsl(285, 78%, 36%);
 }
 
 .resetBtn {
   width: 92%;
-  background-color: var(--keysLightBlueBackground);
   padding: 0.5rem 1rem;
   margin: 0.5rem;
-  color: var(--keysWhite);
   border-radius: 5px;
-  box-shadow: 0px 3px 0px 0px var(--blueKeyShadow);
   font-size: 24px;
   display: flex;
   justify-content: center;
   align-items: end;
 }
+
 .equalBtn {
   font-size: 24px;
-  background-color: var(--Red);
   padding: 0.5rem 1rem;
   margin: 0.5rem;
-  color: var(--keysWhite);
   border-radius: 5px;
-  box-shadow: 0px 3px 0px 0px var(--DarkRed);
 }
 
-.equalBtn:hover {
+.firstThemeEqualBtn {
+  background-color: var(--Red);
+  box-shadow: 0px 3px 0px 0px var(--DarkRed);
+  color: var(--keysWhite);
+}
+.secondThemeEqualBtn {
+  background-color: var(--Orange);
+  box-shadow: 0px 3px 0px 0px var(--DarkOrange);
+  color: var(--keysWhite);
+}
+.thirdThemeEqualBtn {
+  background-color: var(--PureCyan);
+  box-shadow: 0px 3px 0px 0px hsl(177, 52%, 56%);
+  color: var(--VeryDarkViolet);
+}
+
+.firstThemeEqualBtn:active {
+  background-color: hsl(6, 50%, 52%);
+}
+.secondThemeEqualBtn:active {
+  background-color: hsl(28, 67%, 47%);
+}
+.thirdThemeEqualBtn:active {
+  background-color: hsl(177, 100%, 74%);
+}
+
+.theme1:hover,
+.theme2:hover,
+.theme3:hover,
+.key:hover,
+.equalBtn:hover,
+.resetBtn:hover,
+.deleteBtn:hover {
   cursor: pointer;
 }
-.equalBtn:active {
-  background-color: hsl(6, 50%, 52%);
+
+.appAnimation {
+  animation-name: fade-in;
+  animation-duration: 0.5s;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0.8;
+  }
+  to {
+    opacity: 1;
+  }
 }
