@@ -298,6 +298,12 @@ p {
 .thirdThemeEqualBtn:active {
   background-color: hsl(177, 100%, 74%);
 }
+.footer {
+  margin-top: 0.5rem;
+}
+span a {
+  text-decoration: none;
+}
 
 .theme1:hover,
 .theme2:hover,
@@ -333,9 +339,7 @@ p {
   .calculator {
     width: 100%;
   }
-  .resetBtn {
-    /* width: 85%; */
-  }
+
   .key {
     width: 4.3rem;
   }
